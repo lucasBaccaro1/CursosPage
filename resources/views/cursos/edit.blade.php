@@ -45,7 +45,7 @@
                                 <label for="url">URL del curso</label>
                                 <div class="invalid-feedback" data-sb-feedback="url:required">La url es requerida.</div>
                                 <br>
-                            <button class="btn btn-primary" type="submit">Actualizar formulario</button>
+                            <button class="btn btn-primary" type="submit">Actualizar Curso</button>
                         </form>
                     </div>
                 </div>

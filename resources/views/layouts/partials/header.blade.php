@@ -5,24 +5,19 @@
       <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
               <div class="site-heading">
-                  <h1>Plataforma cursos online</h1>
-                  <span class="subheading">En este sitio podras crear tus cursos</span>
+                  <h1>Bienvenidos a cursos online</h1>
               </div>
           </div>
       </div>
   </div>
 
-
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
   <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="{{route('home')}}">
-        <?php
-            $response= Http::get('https://api-dolar-argentina.herokuapp.com/api/dolarblue');
-            $dolar = $response->json();
-        ?>Nuestra cotizacion: <br>{{$dolar['venta']}}</a>
+      <a class="navbar-brand" href="{{route('home')}}">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
+          </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto py-4 py-lg-0">

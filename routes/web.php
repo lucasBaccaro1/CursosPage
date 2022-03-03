@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SearchController;
 
 use App\Mail\ContactanosMailable;
 use App\Mail\WelcomeNewsletter;
@@ -61,8 +62,7 @@ Route::get('contactanos',function(){
 
 Auth::routes();
 
-// Route::get('/admin', [AdminController::class, 'index'])
-//     ->middleware('auth.admin')
-//     ->name('admin.index');
+// Route::get('search/cursos', 'App\Http\Controllers\SearchController@cursos')->name('search.cursos');
 
+Route::get('search/cursos',[SearchController::class,'autocomplete'])->name('search.cursos');
 

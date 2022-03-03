@@ -3,13 +3,6 @@
 @section('title','Curso'. $curso->name)
 
 @section('content')    
-    {{-- <h1>"Bienvenido de curso {{$curso->name}}</h1>
-
-    {{-- <a href=" {{route('cursos.index')}} ">Volver a cursos</a>
-    <br>
-    <a href="{{route('cursos.edit',$curso)}} ">Editar cursos</a> --}}
-    {{-- <p><strong>Categoria:</strong> {{$curso->name}} </p> --}} 
-
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -20,34 +13,21 @@
                                 {{$curso->name}}
                             </div>
                             <div class="card-body">
-                              {{-- <p class="card-text">{{$curso->categoria}}</p> --}}
                               <div >
                                 <p class="card-title"><span class="meta">{{$curso->descripcion}}</span></p>
-                               
                             </div>
                             </div>
                             <div class="card-footer text-muted">
-                                <iframe width="560" height="315" src="{{$curso->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                
+                                <iframe width="560" height="315" src= "{{$curso->url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            
-
                           </div>
-
-
-                        {{-- <h1>{{$curso->name}}</h1>
-                        <h6 class="subheading">{{$curso->categoria}}</h6> --}}
-                        
-                        
                     </div>
                 </div>
             </div>
         </div>
         <br>
         <br>
-{{-- 
-    
-    <p>{{$curso->descripcion}}</p> --}}
+
     @can('cursos.edit')
         <div class="d-flex justify-content-center mb-4"><a class="btn btn-primary text-uppercase" href="{{route('cursos.edit',$curso)}}">Editar Curso</a></div>
     @endcan

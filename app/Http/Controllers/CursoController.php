@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Http;
 
 class CursoController extends Controller
 {
+
     public function index(){
 
-        $response= Http::get('https://api-dolar-argentina.herokuapp.com/api/dolarblue');
-        $dolar = $response->json();
-        $cursos = Curso::orderBy('id', 'desc')->simplePaginate();
-        return view('cursos.index', compact('cursos','dolar'));
+        $cursos = Curso::orderBy('id', 'desc')
+        ->simplePaginate();
+        return view('cursos.index', compact('cursos'));
     }
 
     public function create(){
@@ -67,4 +67,5 @@ class CursoController extends Controller
 
         return redirect()->route('cursos.index');
     }
+
 }
